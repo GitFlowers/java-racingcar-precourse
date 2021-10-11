@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import racinggame.domain.RacingCars;
+import racinggame.domain.RacingDistance;
 
 public class RacingCarsValidationTest {
 
@@ -27,7 +28,7 @@ public class RacingCarsValidationTest {
 	void 자동차_이름_길이_유효성_테스트() {
 		assertThatIllegalArgumentException()
 		.isThrownBy(() -> {
-			String cars = "타요,뿡뿡이3가지,맹꽁이,구댕이,댕댕이,멍순이";
+			String cars = "타요,꼬마자동차타요,맹꽁이,구댕이,댕댕이,멍순이";
 			new RacingCars(Arrays.asList(cars.split(",")));
 		}).withMessageContaining("[ERROR] 자동차 이름은 5자리 이하입니다.");
 	}
