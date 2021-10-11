@@ -5,7 +5,6 @@ public class RacingCar {
 	private int mileage = 0;
 	
 	public RacingCar(String name) {
-		//validateCarNameLength(name);
 		this.name = name;
 	}
 	
