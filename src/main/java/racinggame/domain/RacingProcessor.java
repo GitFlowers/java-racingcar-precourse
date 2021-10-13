@@ -15,6 +15,7 @@ public class RacingProcessor {
 	private RacingProcessor() {}
 	
 	public static RacingProcessor raceStartWith(RacingCars racingCars, RacingDistance racingDistance) {
+		System.out.println("\n실행결과:");
 		RacingProcessor processor = new RacingProcessor();
 		for (int distance = racingDistance.getDistance(); distance > 0; --distance) {
 			processor.moveCars(racingCars);
@@ -29,6 +30,7 @@ public class RacingProcessor {
 			moveByRules(racingCars.get(i));	
 		}
 		printRacingCarsMilleage(racingCars);
+		System.out.println();
 	}
 	
 	private void printRacingCarsMilleage(RacingCars racingCars) {
