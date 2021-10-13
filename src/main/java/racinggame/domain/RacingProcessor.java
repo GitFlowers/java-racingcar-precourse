@@ -48,10 +48,8 @@ public class RacingProcessor {
 	
 	private void setWinners(RacingCars racingCars, RacingDistance racingDistance) {
 		List<RacingCar> winners = new ArrayList<RacingCar>();
-		winners.add(racingCars.get(0));
 		int carCnt = racingCars.size();
-		for (int i = 1; i < carCnt;  i++) {
-			
+		for (int i = 0; i < carCnt;  i++) {
 			addRaceFinishedCar(racingCars.get(i), racingDistance, winners);
 		}
 		this.winners = winners;
