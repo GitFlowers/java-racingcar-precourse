@@ -8,7 +8,7 @@ import java.util.HashSet;
 public class RacingCars {
 	private final int MAX_CAR_NAME_LENGTH = 5;
 	
-	private final List<RacingCar> list = new ArrayList<RacingCar>();
+	private final List<RacingCar> carList = new ArrayList<RacingCar>();
 	
 	public RacingCars(String[] racingCars) {
 		this(Arrays.asList(racingCars));
@@ -18,7 +18,7 @@ public class RacingCars {
 		validateDuplicates(racingCars);
 		for (String carName : racingCars) {
 			validateCarNameLength(carName);
-			list.add(new RacingCar(carName));
+			carList.add(new RacingCar(carName));
 		}
 	}
 	
@@ -33,5 +33,13 @@ public class RacingCars {
 		if (name.length() > MAX_CAR_NAME_LENGTH) {
 			throw new IllegalArgumentException("[ERROR] 자동차 이름은 5자리 이하입니다.");
 		}
+	}
+	
+	public int size() {
+		return carList.size();
+	}
+	
+	public RacingCar get(int index) {
+		return carList.get(index);
 	}
 }
